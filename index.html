@@ -1,490 +1,320 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
-
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HuBot: A Biomimicking Mobile Robot for Non-Disruptive Bird Behavior Study and Ecological Conservation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3, h4 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img, video {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 0.02cm;
+        }
+        .container img {
+            width: 15%; /* Adjust this percentage to change image size */
+            margin-bottom: 0.02cm;
+        }
+        .caption {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
+    <h1>HuBot: A Biomimicking Mobile Robot for Non-Disruptive Bird Behavior Study and Ecological Conservation</h1>
+    <h2>Lyes Saad Saoud et al.</h2>
+    <p>
+      
+     </p>
+    <h2>Abstract</h2>
+    <p>
+        The Houbara bustard, a critically endangered avian species, poses significant challenges for researchers due to its elusive nature and sensitivity to human disturbance. Traditional research methods, often reliant on human observation, have yielded limited data and can inadvertently impact the bird’s behavior. To overcome these limitations, we propose for the first time HuBot, a biomimetic mobile robot designed to seamlessly integrate into the Houbara's natural habitat. Equipped with advanced real-time deep learning algorithms, including YOLOv9 for detection, MobileSAM for segmentation, and ViT for depth estimation, HuBot autonomously tracks individual birds, providing unprecedented insights into their movement patterns, social interactions, and habitat use. By accurately detecting and localizing the houbara, HuBot contributes to a deeper understanding of the Houbara's ecology and informs critical conservation decisions. The robot's biomimetic design, including life-like appearance and movement, minimizes disturbance, allowing for long-term, continuous monitoring without compromising data quality. Rigorous testing, including extensive laboratory experiments and captive trials with real Houbara birds, validated HuBot's performance and its potential to revolutionize the study of this enigmatic species. Through the deployment of HuBot, we aim to provide essential information for developing effective conservation strategies to safeguard the future of the Houbara bustard.
+    </p>
 
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
+    <!-- Placeholder for an image -->
+    <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/images/HuBot_real.png" alt="HuBot in the field">
+
+    <!-- Placeholder for a video -->
+    <body>
+      <div class="video-container">
+          <video controls>
+              <source src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/videos/book.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <video controls>
+              <source src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/videos/HuBot.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
       </div>
-    </div>
+  </body>
+  
 
-  </div>
-</nav>
-
-
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
-          </div>
-
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
+    <h2>Results</h2>
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
+      <!-- Row 1 -->
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R11.jpg" alt="R11">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R12.jpg" alt="R12">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R13.jpg" alt="R13">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R14.jpg" alt="R14">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R15.jpg" alt="R15">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R16.jpg" alt="R16">
+      <!-- Row 2 -->
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R21.jpg" alt="R21">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R22.jpg" alt="R22">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R23.jpg" alt="R23">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R24.jpg" alt="R24">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R25.jpg" alt="R25">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R26.jpg" alt="R26">
+      <!-- Row 3 -->
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R31.jpg" alt="R31">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R32.jpg" alt="R32">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R33.jpg" alt="R33">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R34.jpg" alt="R34">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R35.jpg" alt="R35">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R36.jpg" alt="R36">
+      <!-- Row 4 -->
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R41.jpg" alt="R41">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R42.jpg" alt="R42">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R43.jpg" alt="R43">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R44.jpg" alt="R44">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R45.jpg" alt="R45">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R46.jpg" alt="R46">
+      <!-- Row 5 -->
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R51.jpg" alt="R51">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R52.jpg" alt="R52">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R53.jpg" alt="R53">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R54.jpg" alt="R54">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R55.jpg" alt="R55">
+      <img src="C:/Users/saads/Downloads/nerfies.github.io-main/nerfies.github.io-main/static/figures/R56.jpg" alt="R56">
   </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
+  <div class="caption">
+      <p>HuBot Performance in Real-World Houbara Interaction. This figure showcases the real-world capabilities of HuBot during an encounter with a Houbara bustard. Each column displays:</p>
+      <p>(a) Input Image: The original image captured during the interaction.</p>
+      <p>(b) Houbara Detection: The result of the Houbara detection process, likely using a bounding box around the detected Houbara.</p>
+      <p>(c) Houbara Segmentation: The segmentation mask highlighting the detected Houbara region.</p>
+      <p>(d) Local Houbara Depth Estimation: The depth map focusing on the Houbara, estimated using local features.</p>
+      <p>(e) Masked Local Houbara Depth Estimation: An alternative depth map potentially utilizing a mask for improved accuracy around the Houbara.</p>
+      <p>(f) Houbara Visual Localization: The Houbara's location visualized within the image frame.</p>
   </div>
-</section>
 
+    <h3>Object Detection and Segmentation Models</h3>
+    <p>
+        In our Houbara Observation Study, we present a detailed analysis of the performance of object detection and segmentation models tailored for the detection and segmentation of Houbara bustards. Key findings are summarized through Tables and Figures, which we discuss below.
+    </p>
 
-<section class="section">
-  <div class="container is-max-desktop">
+    <h4>Object Detection and Segmentation Models</h4>
+    <p>
+        Table 1 presents a comparative analysis of various object detection models based on key performance metrics. The mean Average Precision (mAP) at different Intersection over Union (IoU) thresholds offers a comprehensive evaluation of model accuracy in detecting Houbara bustards within varying levels of bounding box overlap. YOLOv9 consistently outperforms other models, achieving exceptional mAP scores across all IoU thresholds. This superior performance underscores YOLOv9's ability to accurately localize objects, even in challenging scenarios with partial occlusions or object deformations.
+    </p>
+    <p>
+        The model’s high precision, recall, and F1-score further solidify its dominance. A precision of 0.9833 indicates a low false positive rate, minimizing the number of incorrect detections. Conversely, a recall of 0.9455 suggests that YOLOv9 effectively identifies most ground truth objects, reducing the risk of missed detections. The resulting F1-score of 0.9640 represents a balanced measure of precision and recall, demonstrating YOLOv9's overall effectiveness.
+    </p>
+    <p>
+        Furthermore, YOLOv9's inference time of 0.0568 seconds is significantly faster than competing models, making it a prime candidate for real-time applications. This speed advantage is crucial for tracking dynamic objects like Houbara bustards, where rapid detection and response are essential.
+    </p>
+    <p>
+        While other models, such as YOLOv8 and Faster R-CNN, exhibit commendable performance, they fall short of YOLOv9 in terms of overall accuracy and speed. Models like MobileNetV3 and Faster R-CNN-MobileNetV3 prioritize speed over accuracy, making them suitable for resource-constrained environments but less ideal for applications demanding high precision.
+    </p>
+    <p>
+        YOLOv9 consistently outperforms other models in detecting Houbara bustards, demonstrating superior accuracy, speed, and robustness. Its exceptional performance across various metrics, including precision, recall, and F1-score, positions it as the ideal choice for real-time applications in wildlife conservation.
+    </p>
 
-    <div class="columns is-centered">
+    <table>
+        <caption>Performance Metrics of Object Detection Models</caption>
+        <thead>
+            <tr>
+                <th>Model Name</th>
+                <th>mAP50</th>
+                <th>mAP75</th>
+                <th>mAP95</th>
+                <th>Precision</th>
+                <th>Recall</th>
+                <th>F1-score</th>
+                <th>Time (Sec.)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>RetinaNet</td>
+                <td>0.8534</td>
+                <td>0.6541</td>
+                <td>0.5631</td>
+                <td>0.8410</td>
+                <td>0.8410</td>
+                <td>0.8410</td>
+                <td>1.9515</td>
+            </tr>
+            <tr>
+                <td>FCOS</td>
+                <td>0.7033</td>
+                <td>0.5111</td>
+                <td>0.4357</td>
+                <td>0.7697</td>
+                <td>0.7697</td>
+                <td>0.7697</td>
+                <td>1.4801</td>
+            </tr>
+            <tr>
+                <td>MobileNet_V3</td>
+                <td>0.7386</td>
+                <td>0.5102</td>
+                <td>0.4568</td>
+                <td>0.7075</td>
+                <td>0.7075</td>
+                <td>0.7075</td>
+                <td>0.1731</td>
+            </tr>
+            <tr>
+                <td>FasterRCNN-ResNet-50</td>
+                <td>0.8567</td>
+                <td>0.7859</td>
+                <td>0.6247</td>
+                <td>0.8428</td>
+                <td>0.8428</td>
+                <td>0.8428</td>
+                <td>2.3628</td>
+            </tr>
+            <tr>
+                <td>FasterRCNN-MobileNetV3</td>
+                <td>0.6734</td>
+                <td>0.4336</td>
+                <td>0.3972</td>
+                <td>0.6856</td>
+                <td>0.6856</td>
+                <td>0.6856</td>
+                <td>0.1046</td>
+            </tr>
+            <tr>
+                <td>YOLOv5</td>
+                <td>0.9100</td>
+                <td>0.6588</td>
+                <td>0.5858</td>
+                <td>0.9103</td>
+                <td>0.8331</td>
+                <td>0.8700</td>
+                <td>0.0840</td>
+            </tr>
+            <tr>
+                <td>YOLOv8</td>
+                <td>0.9208</td>
+                <td>0.7555</td>
+                <td>0.6435</td>
+                <td>0.9325</td>
+                <td>0.8283</td>
+                <td>0.8773</td>
+                <td>0.0739</td>
+            </tr>
+            <tr>
+                <td><strong>YOLOv9</strong></td>
+                <td><strong>0.9856</strong></td>
+                <td><strong>0.9103</strong></td>
+                <td><strong>0.7651</strong></td>
+                <td><strong>0.9833</strong></td>
+                <td><strong>0.9455</strong></td>
+                <td><strong>0.9640</strong></td>
+                <td><strong>0.0568</strong></td>
+            </tr>
+        </tbody>
+    </table>
 
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
+    <h4>Segmentation Models</h4>
+    <table>
+        <caption>Performance Metrics of Segmentation Models</caption>
+        <thead>
+            <tr>
+                <th>Model Name</th>
+                <th>mPLA</th>
+                <th>mIoU</th>
+                <th>Time (Sec.)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mask-RCNN</td>
+                <td>0.7842</td>
+                <td>0.3455</td>
+                <td>0.8273</td>
+            </tr>
+            <tr>
+                <td>SegFormer</td>
+                <td>0.7155</td>
+                <td>0.3540</td>
+                <td>0.1075</td>
+            </tr>
+            <tr>
+                <td>YOLACT</td>
+                <td>0.8098</td>
+                <td>0.3895</td>
+                <td>0.1332</td>
+            </tr>
+            <tr>
+                <td>FCN</td>
+                <td>0.6853</td>
+                <td>0.2987</td>
+                <td>0.0726</td>
+            </tr>
+            <tr>
+                <td>YOLOv8-seg</td>
+                <td>0.8002</td>
+                <td>0.3532</td>
+                <td>0.0692</td>
+            </tr>
+            <tr>
+                <td><strong>MobileSAM</strong></td>
+                <td><strong>0.8764</strong></td>
+                <td><strong>0.5673</strong></td>
+                <td><strong>0.0541</strong></td>
+            </tr>
+        </tbody>
+    </table>
 
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
+    <h4>Comparison of YOLOv9 with state-of-the-art object detection models:</h4>
+    <ul>
+        <li>Performance comparison of YOLOv9 with state-of-the-art object detection models across key metrics (mAP50, mAP75, mAP95, precision, recall, F1-score, and inference time).</li>
+        <li>YOLOv9 demonstrated superior accuracy, precision, recall, and inference speed, achieving a mAP50 of 98.56%, mAP75 of 91.03%, and mAP95 of 76.51%.</li>
+        <li>YOLOv9's precision of 98.33%, recall of 94.55%, and F1-score of 96.40% indicate its robustness in accurately detecting and localizing objects.</li>
+        <li>The inference time of 0.0568 seconds per image showcases YOLOv9's efficiency and suitability for real-time applications.</li>
+        <li>Table 1 presents a detailed comparison of YOLOv9 and other state-of-the-art models across various performance metrics.</li>
+    </ul>
 
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
-
-  </div>
-</section>
-
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
-  </div>
-</section>
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+    <h4>MobileSAM: Effective Segmentation for Houbara Detection</h4>
+    <ul>
+        <li>Performance comparison of segmentation models for accurate identification and localization of Houbara bustards.</li>
+        <li>MobileSAM achieved a mean Pixel-Level Accuracy (mPLA) of 87.64%, mean Intersection over Union (mIoU) of 56.73%, and an inference time of 0.0541 seconds per image.</li>
+        <li>The results highlight MobileSAM's superior accuracy and efficiency compared to other segmentation models (Table 2).</li>
+    </ul>
 
 </body>
 </html>
